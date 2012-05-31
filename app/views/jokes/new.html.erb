@@ -1,0 +1,13 @@
+<h1>Jokes#new</h1>
+<p>Find me in app/views/jokes/new.html.erb</p>
+
+<% if flash[:success] %>
+<%= flash[:success] %>
+<% else %>
+<%= flash[:error] %>
+<% end %>
+
+<%= form_for @joke do |f|  %>
+<%= f.text_area :content %> 
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,26 @@
+<h1>
+	Jokes
+</h1>
+<table style="width:100%">
+<% @jokes.each do |j| %>
+<tr>
+	<td colspan='3'>
+		<%= j.content %>
+	</td>
+<tr>
+<tr>
+	
+	<td>
+	<%= j.up  %> <%= link_to 'Up', joke_path(j.id, :vote=>'up'), :method=>'PUT' %>
+	</td>
+	<td>
+	<%= j.down %> <%= link_to 'Down', joke_path(j.id, :vote=>'down'), :method=>'PUT' %>
+	</td>
+	<td>
+		<%= link_to 'delete', joke_path(j.id), :method => 'DELETE',:confirm=>'Are you sure you want to delete?' %>
+	</td>
+</tr>
+<tr>
+</tr>
+<% end %>
+</table>
