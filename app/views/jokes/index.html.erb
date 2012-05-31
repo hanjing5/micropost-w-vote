@@ -1,13 +1,22 @@
 <h1>
 	Jokes
 </h1>
-<table style="width:100%">
+<br>
+
 <% @jokes.each do |j| %>
+<div class="joke-container">
+<table style="width:100%" id="joke">
+    <tr class="joke">
 <tr>
 	<td colspan='3'>
 		<%= j.content %>
 	</td>
+</tr>
 <tr>
+    <td>
+        <br>
+    </td>
+</tr>
 <tr>
 	
 	<td>
@@ -20,7 +29,9 @@
 		<%= link_to 'delete', joke_path(j.id), :method => 'DELETE',:confirm=>'Are you sure you want to delete?' %>
 	</td>
 </tr>
+</tr>
 <tr>
 </tr>
-<% end %>
 </table>
+</div>
+<% end %>
