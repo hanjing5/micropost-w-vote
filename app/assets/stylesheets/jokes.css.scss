@@ -1,3 +1,18 @@
 // Place all the styles related to the jokes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.joke-container{
+    margin-bottom:20px;
+    box-shadow: 0 5px 5px 0px rgba(0,0,0,0.50);
+    -webkit-box-shadow: 0 10px 10px 0px rgba(0,0,0,0.50);
+    -moz-box-shadow: 0 10px 10px 0px rgba(0,0,0,0.50);
+    padding: 5px;
+    border: 1px solid #ddd;
+    width:100%;
+}
+.joke{
+    width:100%;
+    padding-bottom:5px;
+    font-size:16px;
+}

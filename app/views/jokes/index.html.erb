@@ -5,7 +5,7 @@
 
 <% @jokes.each do |j| %>
 <div class="joke-container">
-<table style="width:100%" id="joke">
+<table class="joke">
     <tr class="joke">
 <tr>
 	<td colspan='3'>
@@ -20,13 +20,13 @@
 <tr>
 	
 	<td>
-	<%= j.up  %> <%= link_to 'Up', joke_path(j.id, :vote=>'up'), :method=>'PUT' %>
+	<%= j.up  %> <%= link_to 'like', joke_path(j.id, :vote=>'up'), :method=>'PUT' %>
 	</td>
 	<td>
-	<%= j.down %> <%= link_to 'Down', joke_path(j.id, :vote=>'down'), :method=>'PUT' %>
+	<%= j.down %> <%= link_to 'dislike', joke_path(j.id, :vote=>'down'), :method=>'PUT' %>
 	</td>
-	<td>
-		<%= link_to 'delete', joke_path(j.id), :method => 'DELETE',:confirm=>'Are you sure you want to delete?' %>
+	<td class="pull-right">
+		<%= link_to 'x', joke_path(j.id), :method => 'DELETE',:confirm=>'Are you sure you want to delete?' %>
 	</td>
 </tr>
 </tr>
